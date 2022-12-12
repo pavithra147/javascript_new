@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numbers </title>
+</head>
+<body>
+    <!-- <p id="align">Integer: </p>
+    <script>
+        var para=document.querySelector('#align');
+        const int =3;
+        para.textContent=`Integer: ${int}`;
+    </script> -->
+    <label for="one">Enter first number</label>
+  <input type="number" id="one" placeholder="number"/>
+  <label for="two">Enter Second number</label>
+  <input type="number" id="two" placeholder="number"/>
+  <button>Result</button>
+  <p id="get">Multiplication: </p>
+  <script>
+    var number1=document.querySelector('#one');
+    var number2=document.querySelector('#two');
+    const button=document.querySelector('button');
+    button.addEventListener('click',getMultiplication);
+    function getMultiplication(){
+        const n1=number1.value;
+        const n2=number2.value;
+        const multiple=n1*n2;
+    //    document.getElementById("get").innerHTML=multiple;
+    const para=document.querySelector('#get');
+    para.textContent=`Multiplication: ${multiple}`;
+       alert(multiple);
+
+    }
+    </script>
+</body>
+</html>

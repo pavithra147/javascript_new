@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Statement</title>
+</head>
+<body>
+    <h1>Conditional Statement</h1>
+    <label for="new">Enter your Age</label>
+    <input type="number" id="new" placeholder="Enter age"/>
+    <button>submit</button>
+    <p id="assume"></p>
+    <script>
+        const age=document.querySelector('input');
+        const button=document.querySelector('button');
+        const para=document.querySelector('#assume');
+        button.onclick=approval;
+        function approval(){
+            if(age.value >=18){
+                para.textContent="You are allowed to vote";
+            
+            }
+            else{
+                para.textContent="You are not eligible to vote";
+            }
+        }
+        
+    </script>
+    <h1>Logical Operators</h1>
+    <form>  
+    <label for="be">Enter your Name</label>
+    <input type="text" id="be" placeholder="enter name"/>
+    <label for="two">Enter your mailid</label>
+    <input type="text" id="two" placeholder="enter mailid"/>
+    <!-- <button id="button">submit</button> -->
+    <input id="submit" type="submit"/>
+</form>
+    <p id="para"></p>
+    <script>
+        const name=document.querySelector('#be');
+        const mail=document.querySelector('#two');
+        const form=document.querySelector('form');
+        form.addEventListener('submit',enterDetails);
+        function enterDetails(ev){
+            ev.preventDefault()
+        if(name.value==="" || mail.value==="")
+        {
+            const parag=document.querySelector('#para');
+            
+            parag.textContent="fill the both details";
+
+        }
+        else{
+            const parag=document.querySelector('#para');
+            parag.textContent="Your details will be submit";
+
+        }
+    }
+    </script>
+    <h1>Switch</h1>
+    <label>
+        select an option:
+    </label>
+    <select id="one">
+        <option value="">--Make an Option</option>
+        <option value="one">one</option>
+        <option value="two">two</option>
+        <option value="">other</option>
+
+    </select>
+    <p id="do">Name:</p>
+    <p id="will">Mail Id:</p>
+    <script>
+        const select =document.querySelector('select');
+        const paragraph=document.querySelector('#do');
+        const p=document.querySelector('#will');
+        select.addEventListener('click',choose); //if choose() is used here means select will choosen without being button click
+        function choose(){
+            switch(select.value){
+                case "one":
+                    const name=prompt("Enter your name");
+                    paragraph.textContent=`Name: ${name}`;
+                    break;
+                case "two":
+                    const mail=prompt("Enter your mailId");
+                    p.textContent=`Mail Id: ${mail}`;
+                    break;
+                    default:
+                        paragraph.textContent="Choose an correct option";
+            }
+        }
+    </script>
+    
+</body>
+</html>

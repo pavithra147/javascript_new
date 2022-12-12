@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop</title>
+</head>
+<body>
+    <p id="result"></p>
+    <h1>While Loop</h1>
+    <!-- <h1>For Loop</h1> -->
+    <button id="one">calculate</button>
+    <button id="two">clear</button>
+    <script>
+        const result=document.querySelector('#result');
+        const calculate=document.querySelector('#one');
+        const clear=document.getElementById('two');
+        
+        calculate.addEventListener('click',calculate1);
+         function calculate1(){
+            for(let i=1;i<10;i++){
+                const newResult=`${i}x${i}=${i*i}`;
+                result.textContent +=`${newResult}\n`;
+            }}
+            // clear.onclick = clear1;
+            clear.addEventListener('click',clear1);
+            function clear1(){
+                result.textContent="";
+            }
+
+
+        
+         
+           </script>
+
+           <!-- while loop
+           
+           <script>
+           const result=document.querySelector('#result');
+           const calculate=document.querySelector('#one');
+           const clear=document.getElementById('two');
+           calculate.onclick=calculate1;
+           function calculate1(){
+            let i=1;
+            while(i<10){
+                const newResult=`${i}x${i}=${i*i}`;
+                result.textContent +=`${newResult}\n`;
+                i++;
+            }}
+            clear.onclick = clear1;
+            // clear.addEventListener('click',clear1);
+            function clear1(){
+                result.textContent="";
+            }
+
+
+        
+</script> -->
+
+          
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ternary Operator</title>
+</head>
+<body>
+    <h1>Changing theme</h1>
+    <label for="ill">Select an background theme</label>
+    <select id="align">
+        <option value="">--Make an option</option>
+        <option value="violet">Violet</option>
+        <option value="black">Black</option>
+    </select>
+    <script>
+        const select =document.querySelector("#align");
+        const html =document.querySelector('html');
+        function update(backgroundcolor, textcolor)
+        {
+            html.style.backgroundColor=backgroundcolor;
+            html.style.color=textcolor;
+        }
+        select.addEventListener('change',()=>select.value==='violet'?update('violet','black'): update('black','violet'));
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function</title>
+    <style>
+      .messagebox{
+        border:2px solid black;
+        width:200px;
+        background-color:darksalmon;
+      }
+    </style>
+</head>
+<body>
+    <script>
+    function displayMessage(){
+      const body=document.body;//by using DOM api can get body element
+      const create=document.createElement('div');//DOM API function called document.createElement() to create <div> element
+      create.setAttribute('class','messagebox');//DOM API function called Element.setAttribute() to set a class attribute with a value of messagebox
+      body.appendChild(create);//DOM function called Node.appendChild()to call create inside the body
+      const msg=document.createElement('p');
+      msg.textContent="This is a message box"
+      create.appendChild(msg);
+      const button=document.createElement('button');
+      button.textContent='x';
+      create.appendChild(button);
+      button.addEventListener('click',()=>{create.parentNode.removeChild(create)});
+      }
+      displayMessage();
+    </script>
+    <br><br>
+
+    <button id="fix">change number</button>
+    <p id="so"></p>
+    <script>
+      const btn=document.querySelector('#fix');
+      function random(number){
+        return number*4;
+      }
+      btn.addEventListener('click',()=>{const num=random(Math.floor(Math.random()*100))
+      const text=document.querySelector('#so');
+      text.textContent=`${num}`});
+    </script>
+    <br>
+
+<input id="textBox" type="text" />
+<div id="output"></div>
+<script>
+  const textBox = document.querySelector("#textBox");
+const output = document.querySelector("#output");
+textBox.addEventListener('keydown', (event) => output.textContent = `You pressed "${event.key}".`);
+</script>
+
+<!--
+function sequence -->
+<p id="demo"></p>
+<script>
+  function display(call){
+    document.getElementById('demo').innerHTML=call;
+
+}
+function first(studentOne,age)
+{
+    this.studentOne=studentOne;
+    this.age=age;
+
+    display(`my name is ${studentOne} and this is my age ${age}`);
+}
+function second(studentTwo,age){
+    this.StudentTwo=studentTwo;
+    this.age=age;
+    display(`my name is ${studentTwo} and this is my age ${age}`);
+
+}
+
+first("logu", 24);
+second("vishnu", 30);
+</script>
+</body>
+</html>
