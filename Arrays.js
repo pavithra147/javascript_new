@@ -111,4 +111,17 @@ console.log(store.every(check,6));//
 
 
 
+const arrayElement=[1,2,4,2,1,3];
+let result=[];
+ result=arrayElement.find (repeat);
+ function repeat(element){
+    for(let i=0; i<arrayElement.length;i++){
+        if(arrayElement[i] !=arrayElement[i+1]){
+               result=(arr[i]);
+        }
+    }
+ }
+ console.log(result);
+    
+
 
