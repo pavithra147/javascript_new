@@ -115,14 +115,15 @@ const Numarray=[1,2,4,2,1,3];
 
 
 
-let result=[];
- result=arrayElement.find (repeat);
- function repeat(element){
-    for(let i=0; i<arrayElement.length;i++){
+// let result=[];
+//  result=arrayElement.find (repeat);
+//  function repeat(element){
+//     for(let i=0; i<arrayElement.length;i++){
         
-    }
- }
- console.log(result);
-    
+//     }
+//  }
+//  console.log(result);
+
+ 
 
 

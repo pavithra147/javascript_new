@@ -12,7 +12,7 @@ function purpose(name,age){
 //But using  (prototype) property we can add new "properties " and "methods"
 purpose.prototype.year=2000;
 //purpose.prototype.measure=calculate();
-const viji=new purpose("viji",23,hello);
+const viji=new purpose("viji",23);
 //viji.name;
 console.log(viji.introduceSelf());
 console.log(viji);
