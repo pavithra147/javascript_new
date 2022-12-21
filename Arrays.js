@@ -123,6 +123,11 @@ const Numarray=[1,2,4,2,1,3];
 //     }
 //  }
 //  console.log(result);
+const res =[1,2,3];
+let answer=res.reduce((num,num1)=>{
+    num + num1;
+})
+console.log(answer);
 
  
 
