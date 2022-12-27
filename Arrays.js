@@ -125,9 +125,17 @@ const Numarray=[1,2,4,2,1,3];
 //  console.log(result);
 const res =[1,2,3];
 let answer=res.reduce((num,num1)=>{
-    num + num1;
+   return num + num1;
 })
 console.log(answer);
+
+//reduce() - this method executes a reducer function on each element of the array and returns the single value
+const contain=["Hello"," ","Everybody"];
+let arr1=contain.reduce((a,b) =>{
+    return a+b;
+})
+console.log(arr1);
+
 
  
 

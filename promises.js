@@ -24,3 +24,37 @@ promise.then(function(value){       // promise is three methods called promise c
 });
 
 
+
+let first =val =>new Promise((resolve, reject)=> { 
+    setTimeout(()=>{
+        resolve(val+20)},1000);
+    
+    setTimeout(()=>{
+        reject(val+10)},10);
+    });
+
+    
+
+first(1).then(a=>a+20).catch(console.log)
+
+//methods
+let second= new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+       return  resolve("success")},1000);
+    });
+
+let third= new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        // reject("failure")},1000);
+        return resolve("successfull")},10);
+    
+
+});
+
+// Promise.all([second,third]).then(console.log).catch(console.log)  //all method execute after all promise got "resolved" it will print array of values
+Promise.allSettled([second,third]).then(console.log).catch(console.log) // it will give each individual response
+// Promise.race([second,third]).then(console.log).then(console.log) //if multiple request is given ,which request's response is executing first that response will execute then other response will not execute
+
+
+
+

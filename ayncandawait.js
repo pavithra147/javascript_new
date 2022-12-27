@@ -1,18 +1,20 @@
 let promise =new Promise((resolve,reject)=>{
     setTimeout(function(){
-        reject("Hello")},2000)
+        resolve("Hello")},2000)
     
+        
+      
     
 });
 async function example(){
-    let result =await promise;
-  // console.log(result);
-  // console.log("welcome");
+  
   try{
+    let result =await promise;
     console.log(result);
+    console.log("Welcome");
   }
   catch{
-     console.log(reject(result));
+     console.log("error");
   }
 }
 example();
