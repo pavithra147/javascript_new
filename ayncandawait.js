@@ -15,7 +15,7 @@ let promise =new Promise((resolve,reject)=>{
       
     
 
-async function example(){
+async function example(){           //async make function return promise           // and await made program to wait for promise
   
   try{
     let result =await promise;

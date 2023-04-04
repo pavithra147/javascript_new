@@ -13,4 +13,7 @@ console.log(items);
 //looping through collections with for loop
 for(let i=0;i<animals.length;i++){
     console.log(animals[i]);
+    for(let j=1;j<animals.length;j++){
+        console.log(animals[j])
+    }
 }

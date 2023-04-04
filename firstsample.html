@@ -19,12 +19,15 @@
 </head>
 <body>
     <P>Player: Chris</P>
+    <input type="text">
     <script>
         const para=document.querySelector('p');
+       
         para.addEventListener('click',updatename);
         function updatename(){
             const name=prompt("Enter a new name");
-            para.textContent=`Player: ${name}`;   /*$ is string literal*/
+           para.textContent=`Player:${name}`;   /*$ is string literal*/
+         
         }
     </script>
    
